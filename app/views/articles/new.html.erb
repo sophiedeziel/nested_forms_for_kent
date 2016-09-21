@@ -1,0 +1,9 @@
+<%= form_for @article do |f| %>
+  <%= f.text_field :title %>
+  <br/>
+  <%= f.fields_for :comments do |ff| %>
+    <%= ff.text_field :from %>
+  <br/>
+  <% end %>
+  <%= f.submit %>
+<% end %>

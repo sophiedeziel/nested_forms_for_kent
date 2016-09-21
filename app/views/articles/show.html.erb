@@ -1,0 +1,7 @@
+<h1><%= @article.title %></h1>
+
+<%= simple_format @article.content %>
+
+<% @article.comments.each do |comment| %>
+  <%= comment.from %>
+<% end %>
